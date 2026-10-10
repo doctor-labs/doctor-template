@@ -19,5 +19,5 @@ cargo generate --git https://github.com/doctor-labs/doctor-template template --n
 ```
 
 You get `src/scanner.rs` (the only file to fill in), `src/checks/` (copy per check), `doctor.toml`,
-`theme.toml`, CI, README, AGENTS.md. `doctor-kit` is pinned by git rev until it is on crates.io.
+`theme.toml`, CI, README, AGENTS.md. `doctor-kit` comes from crates.io (`doctor-kit = "0.1"`).
 CI here stamps the template and builds the result.
