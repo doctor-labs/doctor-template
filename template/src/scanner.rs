@@ -11,6 +11,9 @@ impl Doctor for Scanner {
     fn version(&self) -> &str {
         env!("CARGO_PKG_VERSION")
     }
+    fn about(&self) -> &str {
+        env!("CARGO_PKG_DESCRIPTION")
+    }
     /// Display order. Findings in a category not listed here are dropped.
     fn categories(&self) -> Vec<&'static str> {
         vec![checks::empty_file::CATEGORY]
