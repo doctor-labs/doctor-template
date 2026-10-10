@@ -17,9 +17,7 @@ repl = ["doctor-kit/repl"]
 tui = ["doctor-kit/tui"]
 
 [dependencies]
-# doctor-kit is not on crates.io yet, so it is pinned by git rev. Bump the rev to upgrade;
-# switch to `doctor-kit = "0.1"` once it is published.
-doctor-kit = { git = "https://github.com/doctor-labs/doctor-kit", rev = "43cd4faaf85cc4360b8efb584bdc6a48be4786b6" }
+doctor-kit = "0.1"
 doctor-core = "0.1"
 
 [dev-dependencies]

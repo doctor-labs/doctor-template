@@ -30,4 +30,4 @@ cargo generate --git https://github.com/doctor-labs/doctor-template template --n
 
 ## Note
 
-`doctor-kit` is pinned by git rev in `Cargo.toml` until it is published to crates.io.
+`doctor-kit` comes from crates.io (`doctor-kit = "0.1"` in `Cargo.toml`).
