@@ -1,0 +1,25 @@
+[template]
+cargo_generate_version = ">=0.21.0"
+
+[hooks]
+pre = ["pre.rhai"]
+
+[placeholders.description]
+type = "string"
+prompt = "Short description (one sentence)?"
+default = "A doctor CLI that scans a project and reports a health score"
+
+[placeholders.bin_name]
+type = "string"
+prompt = "Binary name (empty = same as the tool name)?"
+default = ""
+
+[placeholders.domain]
+type = "string"
+prompt = "What does it scan (one-line noun, e.g. 'Dockerfiles')?"
+default = "a directory of files"
+
+[placeholders.author]
+type = "string"
+prompt = "Author?"
+default = "Vaibhav91one <108279746+Vaibhav91one@users.noreply.github.com>"

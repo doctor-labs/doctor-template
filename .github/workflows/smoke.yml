@@ -1,0 +1,28 @@
+name: Template smoke test
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  stamp-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo install cargo-generate --locked
+      - name: Stamp the template non-interactively
+        run: |
+          cargo generate --path . template --name smoke-doctor --silent \
+            -d description="smoke" -d domain="text files" -d bin_name="" \
+            -d author="CI <ci@example.com>" --destination "$RUNNER_TEMP"
+      - name: Build, lint, test, run the stamped project
+        working-directory: ${{ runner.temp }}/smoke-doctor
+        run: |
+          cargo fmt --all --check
+          cargo clippy --all-targets --all-features -- -D warnings
+          cargo test --all-features
+          cargo build --no-default-features
+          cargo run -- scan . --headless

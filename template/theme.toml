@@ -1,0 +1,4 @@
+# Overlay on the base theme (mono | clinical | contrast). Tokens: ok info low medium high
+# critical heading dim accent. Styles: bold dim underline italic, a color name or #rrggbb.
+base = "clinical"
+# accent = "bold cyan"

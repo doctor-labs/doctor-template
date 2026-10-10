@@ -1,0 +1,13 @@
+# Score = 100 minus these points per finding (by severity), floored at 0.
+[score]
+critical = 25
+high = 10
+medium = 4
+low = 1
+info = 0
+
+[checks]
+# When non-empty, only these check ids run.
+enable = []
+# These never run (wins over `enable`).
+disable = []   # e.g. ["files.empty"]
