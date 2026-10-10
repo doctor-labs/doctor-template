@@ -17,7 +17,7 @@ repl = ["doctor-kit/repl"]
 tui = ["doctor-kit/tui"]
 
 [dependencies]
-doctor-kit = "0.1"
+doctor-kit = "0.1.1"
 doctor-core = "0.1"
 
 [dev-dependencies]
